@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ARView-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" userLabel="ARView" customClass="ViewController" customModule="TinyToyTank" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xhV-mJ-uBr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arView multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DjF-5Q-aCe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </arView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jvL-ip-Tj6" userLabel="TankRight">
+                                <rect key="frame" x="294" y="605" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TankRight"/>
+                                <connections>
+                                    <action selector="TankRightPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wMz-PT-ZU5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1h-vY-CtQ" userLabel="TankLeft">
+                                <rect key="frame" x="78" y="605" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TankLeft"/>
+                                <connections>
+                                    <action selector="TankLeftPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fNk-fl-Krv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYG-PG-hAn" userLabel="TankForward">
+                                <rect key="frame" x="186" y="495" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TankForward"/>
+                                <connections>
+                                    <action selector="TankForwardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x41-do-Og6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIy-3i-HeS" userLabel="CannonFire">
+                                <rect key="frame" x="186" y="605" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="CannonFire"/>
+                                <connections>
+                                    <action selector="CannonFirePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CTo-G4-ETc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15n-ez-VnB" userLabel="TurretRight">
+                                <rect key="frame" x="294" y="495" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TurretRight"/>
+                                <connections>
+                                    <action selector="TurretRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JKh-Ae-ruU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVV-JO-e6A" userLabel="TurretLeft">
+                                <rect key="frame" x="78" y="495" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TurretLeft"/>
+                                <connections>
+                                    <action selector="TurretLeftPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T8T-ds-gAu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bph-IB-Hyh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Bph-IB-Hyh" firstAttribute="trailing" secondItem="DjF-5Q-aCe" secondAttribute="trailing" id="2cY-OQ-ag0"/>
+                            <constraint firstItem="DjF-5Q-aCe" firstAttribute="leading" secondItem="Bph-IB-Hyh" secondAttribute="leading" id="4aw-fh-2zI"/>
+                            <constraint firstItem="Bph-IB-Hyh" firstAttribute="bottom" secondItem="DjF-5Q-aCe" secondAttribute="bottom" id="8Cb-hM-pLM"/>
+                            <constraint firstItem="DjF-5Q-aCe" firstAttribute="top" secondItem="Bph-IB-Hyh" secondAttribute="top" id="w8H-3G-6vx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="arView" destination="DjF-5Q-aCe" id="3sl-oA-W3X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CannonFire" width="256" height="256"/>
+        <image name="TankForward" width="256" height="256"/>
+        <image name="TankLeft" width="256" height="256"/>
+        <image name="TankRight" width="256" height="256"/>
+        <image name="TurretLeft" width="256" height="256"/>
+        <image name="TurretRight" width="256" height="256"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
